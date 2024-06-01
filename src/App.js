@@ -1,37 +1,35 @@
 import "./App.css";
-import Card from "./Components/Card.jsx";
+import CategoryMenu from "./Components/CategoryMenu/CategoryMenu.component.jsx";
 
 const App = () => {
   const categories = [
     {
       id: 1,
-      title: "Hats",
+      title: "hats",
+      imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
     },
     {
       id: 2,
-      title: "Jeans",
+      title: "jackets",
+      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
     },
     {
       id: 3,
-      title: "Trousers",
+      title: "sneakers",
+      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
     },
     {
       id: 4,
-      title: "Men's",
+      title: "womens",
+      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
     },
     {
       id: 5,
-      title: "Women's",
+      title: "mens",
+      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
     },
   ];
-
-  return (
-    <div className="categories-container">
-      {categories.map((category) => (
-        <Card item={category.title} />
-      ))}
-    </div>
-  );
+  return <CategoryMenu categories={categories} />;
 };
 
 export default App;
